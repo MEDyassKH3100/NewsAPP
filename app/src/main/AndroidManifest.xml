@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" >
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:hardwareAccelerated="true"
         android:usesCleartextTraffic="true"
         android:name=".NewsApplication"
         android:allowBackup="true"
@@ -26,5 +27,14 @@
             </intent-filter>
         </activity>
     </application>
-
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+        </intent>
+    </queries>
 </manifest>

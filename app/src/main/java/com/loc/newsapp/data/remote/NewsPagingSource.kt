@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.loc.newsapp.domain.model.Article
+import kotlinx.coroutines.delay
 
 class NewsPagingSource(
     private val newsApi: NewsApi,
